@@ -51,7 +51,7 @@ export default function AnimatedCollection({ initialItems, title = "My Collectio
     const items = initialItems;
 
     return (
-        <div className="w-full max-w-xl mx-auto p-4 md:p-8 font-sans selection:bg-primary/10">
+        <div className="w-full max-w-4xl mx-auto font-sans selection:bg-primary/10">
             <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-5">
                     <h2 className="text-xl font-medium text-foreground ">

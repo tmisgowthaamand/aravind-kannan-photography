@@ -83,9 +83,9 @@ export default function ShakeTestimonial() {
     }, [handleNext]);
 
     return (
-        <div className="flex items-center justify-center w-full bg-transparent p-4 overflow-hidden py-4 min-h-[450px] max-w-[440px] mx-auto">
+        <div className="flex items-center justify-center w-full bg-transparent p-4 overflow-hidden py-4 min-h-[400px] md:min-h-[450px] max-w-full md:max-w-[440px] mx-auto">
             <div
-                className="relative w-full h-[280px]"
+                className="relative w-full h-[340px]"
                 style={{ perspective: "1200px" }}
             >
                 <AnimatePresence mode="popLayout">

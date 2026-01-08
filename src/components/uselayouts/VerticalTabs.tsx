@@ -86,8 +86,8 @@ export default function VerticalTabs() {
     };
 
     return (
-        <section className="w-full bg-background py-8 md:py-16">
-            <div className="w-full px-4 md:px-8 mx-auto xl:max-w-7xl">
+        <div className="w-full bg-background">
+            <div className="w-full mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                     {/* Left Column: Content */}
                     <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 pt-4">
@@ -233,6 +233,6 @@ export default function VerticalTabs() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

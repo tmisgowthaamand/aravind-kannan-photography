@@ -54,7 +54,7 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <AuroraBackground className="h-auto min-h-[80vh] py-24 overflow-hidden">
-        <div className="container-editorial relative z-10">
+        <div className="container-editorial relative z-10 px-6 md:px-12 lg:px-20">
           <div className="flex flex-col items-center text-center mb-12">
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.2em] uppercase bg-secondary/80 backdrop-blur-sm rounded-full">
               Photography Studio

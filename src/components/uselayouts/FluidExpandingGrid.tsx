@@ -96,11 +96,11 @@ export default function FluidExpandingGrid({
                 className
             )}
         >
-            <div className="w-full max-w-2xl px-6">
+            <div className="w-full max-w-5xl px-0 md:px-6">
                 <LayoutGroup id={id}>
                     <motion.div
                         layout
-                        className="grid grid-cols-2 grid-rows-2 gap-6 w-full h-[340px] sm:h-[540px]"
+                        className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-6 w-full h-[400px] sm:h-[540px]"
                     >
                         {items.map((item) => {
                             const isRow1 = layout.row1.includes(item.id);
