@@ -1,206 +1,154 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import heroImage from '@/assets/hero-wedding.jpg';
+import { AuroraBackground } from '../components/creative/AuroraBackground';
+
+// Uselyout Components
+import FeatureCarousel from '../components/uselayouts/FeatureCarousel';
+import FluidExpandingGrid from '../components/uselayouts/FluidExpandingGrid';
+import VerticalTabs from '../components/uselayouts/VerticalTabs';
+import ShakeTestimonial from '../components/uselayouts/ShakeTestimonial';
+
+// Assets
+import heroWedding from '@/assets/hero-wedding.jpg';
 import portfolioWedding from '@/assets/portfolio-wedding.jpg';
 import portfolioBridal from '@/assets/portfolio-bridal.jpg';
 import portfolioFashion from '@/assets/portfolio-fashion.jpg';
 import portfolioPortrait from '@/assets/portfolio-portrait.jpg';
 import portfolioCommercial from '@/assets/portfolio-commercial.jpg';
 
-const portfolioCategories = [
-  {
-    id: 'weddings',
-    title: 'Weddings',
-    subtitle: 'Timeless celebrations',
-    image: portfolioWedding,
-    link: '/portfolio/weddings',
-  },
-  {
-    id: 'bridal',
-    title: 'Bridal & Couple',
-    subtitle: 'Intimate portraits',
-    image: portfolioBridal,
-    link: '/portfolio/bridal',
-  },
-  {
-    id: 'fashion',
-    title: 'Fashion & Editorial',
-    subtitle: 'Artistic vision',
-    image: portfolioFashion,
-    link: '/portfolio/fashion',
-  },
-  {
-    id: 'portraits',
-    title: 'Portraits',
-    subtitle: 'Authentic moments',
-    image: portfolioPortrait,
-    link: '/portfolio/portraits',
-  },
-  {
-    id: 'commercial',
-    title: 'Commercial',
-    subtitle: 'Brand storytelling',
-    image: portfolioCommercial,
-    link: '/portfolio/commercial',
-  },
-];
-
 const Index = () => {
+  const portfolioItems = [
+    {
+      id: 'weddings',
+      title: 'Weddings',
+      subtitle: 'Timeless celebrations of love',
+      image: portfolioWedding,
+      color: '#e2d1c3',
+    },
+    {
+      id: 'bridal',
+      title: 'Bridal',
+      subtitle: 'Intimate and elegant portraits',
+      image: portfolioBridal,
+      color: '#f5f5f5',
+    },
+    {
+      id: 'fashion',
+      title: 'Fashion',
+      subtitle: 'Artistic vision and style',
+      image: portfolioFashion,
+      color: '#1a1a1a',
+    },
+    {
+      id: 'commercial',
+      title: 'Commercial',
+      subtitle: 'Elevating brands through vision',
+      image: portfolioCommercial,
+      color: '#d4af37',
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Wedding photography by Aravind Kannan"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground/50" />
+      <AuroraBackground className="h-auto min-h-[80vh] py-24 overflow-hidden">
+        <div className="container-editorial relative z-10">
+          <div className="flex flex-col items-center text-center mb-12">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.2em] uppercase bg-secondary/80 backdrop-blur-sm rounded-full">
+              Photography Studio
+            </span>
+            <h1 className="text-display mb-6">Aravind Kannan</h1>
+            <p className="text-subheadline text-muted-foreground max-w-2xl mx-auto">
+              Capturing the extraordinary in every moment with timeless artistry and authentic connection.
+            </p>
+          </div>
+          <FeatureCarousel />
         </div>
-        
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <p 
-            className="text-caption text-primary-foreground/80 mb-6 opacity-0 animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Photography Studio
-          </p>
-          <h1 
-            className="text-display text-primary-foreground mb-8 opacity-0 animate-fade-in-up"
-            style={{ animationDelay: '0.4s' }}
-          >
-            Aravind Kannan
-          </h1>
-          <p 
-            className="text-xl md:text-2xl font-serif text-primary-foreground/90 max-w-2xl mx-auto opacity-0 animate-fade-in-up"
-            style={{ animationDelay: '0.6s' }}
-          >
-            Capturing the extraordinary in every moment
-          </p>
-        </div>
+      </AuroraBackground>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
-          <div className="w-px h-16 bg-gradient-to-b from-primary-foreground/50 to-transparent" />
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="section-padding bg-background">
-        <div className="container-editorial max-w-3xl text-center">
-          <p className="text-subheadline text-muted-foreground leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            For over a decade, I have dedicated myself to the art of visual storytelling. 
-            Each frame is an invitation to pause, to feel, to remember.
-          </p>
-        </div>
-      </section>
-
-      {/* Portfolio Categories */}
-      <section className="section-padding pt-0">
+      {/* Portfolio Grid Section */}
+      <section className="section-padding bg-secondary/20">
         <div className="container-editorial">
-          <div className="flex items-center justify-between mb-12 md:mb-16">
-            <h2 className="text-headline">Portfolio</h2>
-            <Link to="/portfolio" className="btn-minimal hidden md:inline-flex">
-              View All <ArrowRight size={16} />
+          <div className="flex items-center justify-between mb-16">
+            <div>
+              <p className="text-caption text-muted-foreground mb-2">Portfolio</p>
+              <h2 className="text-headline">The Curated Gallery</h2>
+            </div>
+            <Link to="/portfolio" className="btn-minimal hidden md:inline-flex group">
+              View All Work
+              <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
-          {/* Category Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {portfolioCategories.map((category, index) => (
-              <Link
-                key={category.id}
-                to={category.link}
-                className="group block opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-              >
-                <div className="image-reveal aspect-[3/4] mb-4 rounded-sm overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-serif text-xl group-hover:text-muted-foreground transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground tracking-wide">
-                    {category.subtitle}
-                  </p>
-                </div>
-              </Link>
-            ))}
+          <div className="min-h-[600px]">
+            <FluidExpandingGrid items={portfolioItems} id="home-portfolio-grid" />
           </div>
 
-          {/* Mobile View All Link */}
           <div className="mt-12 text-center md:hidden">
             <Link to="/portfolio" className="btn-minimal">
-              View All Work <ArrowRight size={16} />
+              View All Work <ArrowRight size={16} className="ml-2" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding">
         <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="space-y-6">
-              <p className="text-caption text-muted-foreground">Approach</p>
-              <h2 className="text-headline">
-                Where artistry meets authenticity
-              </h2>
-              <div className="space-y-4 text-body text-muted-foreground">
-                <p>
-                  Photography is more than documentation—it is interpretation. 
-                  My work seeks the quiet moments, the unguarded expressions, 
-                  the light that tells its own story.
-                </p>
-                <p>
-                  Whether capturing the grandeur of a wedding celebration or 
-                  the subtle emotions of a portrait session, I bring the same 
-                  dedication to craft and connection.
-                </p>
-              </div>
-              <Link to="/about" className="btn-minimal mt-8 inline-flex">
-                About the Studio <ArrowRight size={16} />
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+            <div className="text-center mb-16">
+              <p className="text-caption text-muted-foreground mb-2">Our Philosophy</p>
+              <h2 className="text-headline">Where artistry meets authenticity</h2>
+              <p className="text-body text-muted-foreground max-w-2xl mx-auto mt-4">
+                Photography is more than documentation—it is interpretation. Our work seeks the quiet moments,
+                the unguarded expressions, the light that tells its own story.
+              </p>
             </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="image-reveal aspect-[3/4] rounded-sm overflow-hidden translate-y-8">
-                <img
-                  src={portfolioBridal}
-                  alt="Bridal portrait"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="image-reveal aspect-[3/4] rounded-sm overflow-hidden -translate-y-8">
-                <img
-                  src={portfolioFashion}
-                  alt="Fashion editorial"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <VerticalTabs />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-padding bg-background border-y border-border">
+        <div className="container-editorial">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="max-w-md">
+              <p className="text-caption text-muted-foreground mb-4 font-medium uppercase tracking-widest">Feedback</p>
+              <h2 className="text-4xl md:text-5xl font-serif leading-tight">Trusted by incredible people</h2>
+              <p className="text-body text-muted-foreground mt-6">
+                Hear from those who've entrusted us with their most precious moments.
+                Our connection with clients is the heart of every project.
+              </p>
+            </div>
+            <div className="flex-1 flex justify-center md:justify-end">
+              <ShakeTestimonial />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="section-padding">
-        <div className="container-editorial text-center max-w-2xl">
-          <h2 className="text-headline mb-6">Let's create together</h2>
-          <p className="text-body text-muted-foreground mb-10">
-            Every project begins with a conversation. I would love to hear about 
-            the moments you want to preserve.
+      {/* Final CTA */}
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <img src={heroWedding} alt="" className="w-full h-full object-cover grayscale" />
+        </div>
+        <div className="container-editorial relative z-10 text-center max-w-3xl">
+          <h2 className="text-5xl md:text-6xl font-serif mb-8 italic">Let's create together</h2>
+          <p className="text-xl text-muted-foreground mb-12">
+            Every project begins with a conversation. We would love to hear about the
+            moments you want to preserve for a lifetime.
           </p>
-          <Link to="/contact" className="btn-minimal">
-            Get in Touch <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link to="/contact" className="px-10 py-5 bg-foreground text-background rounded-full font-medium hover:opacity-90 transition-opacity">
+              Start Your Journey
+            </Link>
+            <Link to="/portfolio" className="btn-minimal text-lg group">
+              Browse Our Work
+              <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
