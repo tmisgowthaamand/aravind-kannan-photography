@@ -17,6 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "../theme-provider";
 
 // Change Here
 const MAIN_NAV = [
@@ -42,7 +43,7 @@ const BottomMenu = () => {
         "default" | "theme"
     >("default");
 
-    const [theme, setTheme] = useState<"light" | "dark" | "system">("light");
+    const { theme, setTheme } = useTheme();
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

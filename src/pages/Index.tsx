@@ -5,6 +5,7 @@ import { AuroraBackground } from '../components/creative/AuroraBackground';
 
 // Uselyout Components
 import FeatureCarousel from '../components/uselayouts/FeatureCarousel';
+
 import FluidExpandingGrid from '../components/uselayouts/FluidExpandingGrid';
 import VerticalTabs from '../components/uselayouts/VerticalTabs';
 import ShakeTestimonial from '../components/uselayouts/ShakeTestimonial';

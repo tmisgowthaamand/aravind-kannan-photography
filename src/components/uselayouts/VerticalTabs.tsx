@@ -6,30 +6,31 @@ import { cn } from "@/lib/utils";
 import { ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
+import portfolioWedding from '@/assets/portfolio-wedding.jpg';
+import portfolioFashion from '@/assets/portfolio-fashion.jpg';
+import portfolioCommercial from '@/assets/portfolio-commercial.jpg';
+
 // Change Here
 const SERVICES = [
     {
         id: "01",
-        title: "Web Design",
+        title: "Wedding Photography",
         description:
-            "Creating beautiful, functional, and user-centric digital experiences.",
-        image:
-            "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200",
+            "Timeless, cinematic storytelling that captures the emotion and elegance of your special day.",
+        image: portfolioWedding,
     },
     {
         id: "02",
-        title: "Framer Development",
-        description: "Building high-performance, animated websites with Framer.",
-        image:
-            "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
+        title: "Fashion & Editorial",
+        description: "Avant-garde visual narratives for brands, magazines, and designers seeking distinct style.",
+        image: portfolioFashion,
     },
     {
         id: "03",
-        title: "Branding",
+        title: "Commercial Campaigns",
         description:
-            "Defining your brand's visual identity and voice for a lasting impression.",
-        image:
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+            "High-impact visual content designed to elevate brands and connect with audiences globally.",
+        image: portfolioCommercial,
     },
 ];
 
@@ -92,7 +93,7 @@ export default function VerticalTabs() {
                     <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 pt-4">
                         <div className="space-y-1 mb-10">
                             <h2 className="tracking-tighter text-3xl font-medium md:text-4xl text-foreground">
-                                How I can help you
+                                Our Expertise
                             </h2>
                             <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-[0.3em] block ml-0.5">
                                 (SERVICES)

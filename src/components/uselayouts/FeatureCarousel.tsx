@@ -3,99 +3,56 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-    Pizza04Icon,
-    CommandFreeIcons,
     GlobalSearchIcon,
-    AiCloudIcon,
-    SmartPhone01Icon,
-    CheckmarkCircle01Icon,
-    DashboardSquare01Icon,
-    MagicWandIcon,
+    Camera01Icon,
+    BrushIcon,
+    StarIcon,
+    Layers01Icon
 } from "@hugeicons/core-free-icons";
 import { cn } from "@/lib/utils";
 import { HugeiconsIcon } from "@hugeicons/react";
+import colleaguesImg from "@/assets/creative-team.png";
+import portfolioWedding from '@/assets/portfolio-wedding.jpg';
+import portfolioBridal from '@/assets/portfolio-bridal.jpg';
+import portfolioFashion from '@/assets/portfolio-fashion.jpg';
+import portfolioCommercial from '@/assets/portfolio-commercial.jpg';
 
 // Change Here
 const FEATURES = [
     {
-        id: "sustainable",
-        label: "Sustainable Sourcing",
-        icon: Pizza04Icon,
-        image:
-            "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200",
-        description: "Ethically sourced ingredients from local farmers.",
-    },
-    {
-        id: "community",
-        label: "Community Focused",
-        icon: CommandFreeIcons,
-        image:
-            "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200",
-        description: "Building stronger bonds through shared experiences.",
-    },
-    {
         id: "global",
-        label: "Global Reach",
+        label: "Our Team",
         icon: GlobalSearchIcon,
-        image:
-            "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200",
+        image: colleaguesImg,
         description: "Connecting visionaries across all continents.",
     },
     {
-        id: "award",
-        label: "Award Winning",
-        icon: CheckmarkCircle01Icon,
-        image:
-            "https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?q=80&w=1200",
-        description: "Recognized excellence in design and innovation.",
+        id: "wedding",
+        label: "Wedding Stories",
+        icon: Camera01Icon,
+        image: portfolioWedding,
+        description: "Capturing your special day with cinematic elegance.",
     },
     {
-        id: "cloud",
-        label: "Cloud Ready",
-        icon: AiCloudIcon,
-        image:
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200",
-        description: "Scale your infrastructure with seamless ease.",
+        id: "fashion",
+        label: "Fashion & Editorial",
+        icon: BrushIcon,
+        image: portfolioFashion,
+        description: "Avant-garde style and professional modeling shoots.",
     },
     {
-        id: "mobile",
-        label: "Mobile First",
-        icon: SmartPhone01Icon,
-        image:
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
-        description: "A world-class experience on every single device.",
+        id: "bridal",
+        label: "Bridal Portraits",
+        icon: StarIcon,
+        image: portfolioBridal,
+        description: "Intimate and detailed bridal photography.",
     },
     {
-        id: "analytics",
-        label: "Real-time Analytics",
-        icon: DashboardSquare01Icon,
-        image:
-            "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=1200",
-        description: "Insights at your fingertips, updated in real-time.",
-    },
-    {
-        id: "security",
-        label: "Enterprise Security",
-        icon: CheckmarkCircle01Icon,
-        image:
-            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
-        description: "Bank-grade security protocols for your data.",
-    },
-    {
-        id: "magic",
-        label: "Magic Automations",
-        icon: MagicWandIcon,
-        image:
-            "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200",
-        description: "Let AI handle the repetitive tasks for you.",
-    },
-    {
-        id: "local",
-        label: "Locally Owned",
-        icon: CheckmarkCircle01Icon,
-        image:
-            "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200",
-        description: "Supporting local businesses and creators.",
+        id: "commercial",
+        label: "Commercial",
+        icon: Layers01Icon,
+        image: portfolioCommercial,
+        description: "Elevating brands through high-end visuals.",
     },
 ];
 
@@ -277,7 +234,7 @@ export default function FeatureCarousel() {
                                     >
                                         <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_10px_white]" />
                                         <span className="text-white/80 text-[10px] font-normal uppercase tracking-[0.3em] font-mono">
-                                            Live Session
+                                            Featured
                                         </span>
                                     </div>
                                 </motion.div>
