@@ -106,7 +106,7 @@ export default function FeatureCarousel() {
                 <div className="w-full lg:w-[40%] min-h-[350px] md:min-h-[450px] lg:h-full relative z-30 flex flex-col items-start justify-center overflow-hidden px-8 md:px-16 lg:pl-16 bg-[#62B2FE] ">
                     <div className="absolute inset-x-0 top-0 h-12 md:h-20 lg:h-16 bg-gradient-to-b from-[#62B2FE] via-[#62B2FE]/80 to-transparent z-40" />
                     <div className="absolute inset-x-0 bottom-0 h-12 md:h-20 lg:h-16 bg-gradient-to-t from-[#62B2FE] via-[#62B2FE]/80 to-transparent z-40" />
-                    <div className="relative w-full h-full flex items-center justify-center lg:justify-start z-20">
+                    <div className="relative w-full h-full flex items-center justify-start z-20">
                         {FEATURES.map((feature, index) => {
                             const isActive = index === currentIndex;
                             const distance = index - currentIndex;
