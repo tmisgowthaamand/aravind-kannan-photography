@@ -156,6 +156,9 @@ export default function ShakeTestimonial() {
                                                 src={card.avatar}
                                                 className="w-full h-full object-cover"
                                                 alt={card.name}
+                                                width={64}
+                                                height={64}
+                                                loading="lazy"
                                             />
                                         </div>
 
@@ -167,7 +170,7 @@ export default function ShakeTestimonial() {
                                                 {card.name}
                                             </h3>
                                             <p
-                                                className="text-[10px] opacity-60 !p-0 !m-0"
+                                                className="text-[10px] opacity-80 !p-0 !m-0"
                                                 style={{ color: card.textColor }}
                                             >
                                                 {card.role}

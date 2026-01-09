@@ -192,6 +192,7 @@ const BottomMenu = () => {
                                     "p-3.5 rounded-full transition-all duration-300",
                                     isActive ? "bg-foreground text-background" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                                 )}
+                                aria-label={name}
                             >
                                 <HugeiconsIcon
                                     icon={Icon as any}
@@ -210,6 +211,7 @@ const BottomMenu = () => {
                                 isActive ? "bg-accent text-foreground" : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                             )}
                             onClick={() => setView(view === name ? "default" : (name as any))}
+                            aria-label={name}
                         >
                             <HugeiconsIcon
                                 icon={Icon as any}

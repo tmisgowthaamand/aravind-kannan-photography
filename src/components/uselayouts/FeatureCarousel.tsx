@@ -140,16 +140,16 @@ export default function FeatureCarousel() {
                                         onMouseEnter={() => setIsPaused(true)}
                                         onMouseLeave={() => setIsPaused(false)}
                                         className={cn(
-                                            "relative flex items-center gap-4 px-6 md:px-10 lg:px-8 py-3.5 md:py-5 lg:py-4 rounded-full transition-all duration-700 text-left group border",
+                                            "relative flex items-center gap-4 px-6 md:px-10 lg:px-8 py-3.5 md:py-5 lg:py-4 rounded-full transition-colors duration-500 text-left group border",
                                             isActive
                                                 ? "bg-white text-[#62B2FE] border-white z-10"
-                                                : "bg-transparent text-white/60 border-white/20 hover:border-white/40 hover:text-white"
+                                                : "bg-transparent text-white/80 border-white/20 hover:border-white/40 hover:text-white"
                                         )}
                                     >
                                         <div
                                             className={cn(
                                                 "flex items-center justify-center transition-colors duration-500",
-                                                isActive ? "text-[#62B2FE]" : "text-white/40"
+                                                isActive ? "text-[#62B2FE]" : "text-white/70"
                                             )}
                                         >
                                             <HugeiconsIcon
@@ -200,6 +200,9 @@ export default function FeatureCarousel() {
                                     <img
                                         src={feature.image}
                                         alt={feature.label}
+                                        width={800}
+                                        height={1000}
+                                        loading="lazy"
                                         className={cn(
                                             "w-full h-full object-cover transition-all duration-700",
                                             isActive

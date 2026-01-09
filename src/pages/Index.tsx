@@ -133,7 +133,7 @@ const Index = () => {
       {/* Final CTA */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-          <img src={heroWedding} alt="" className="w-full h-full object-cover grayscale" />
+          <img src={heroWedding} alt="" width={1920} height={1080} className="w-full h-full object-cover grayscale" />
         </div>
         <div className="container-editorial relative z-10 text-center max-w-3xl">
           <h2 className="text-5xl md:text-6xl font-serif mb-8 italic">Let's create together</h2>

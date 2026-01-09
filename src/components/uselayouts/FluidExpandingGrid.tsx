@@ -145,6 +145,9 @@ export default function FluidExpandingGrid({
                                         <img
                                             src={item.image}
                                             alt={item.title}
+                                            width={600}
+                                            height={800}
+                                            loading="lazy"
                                             className={cn(
                                                 "absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out",
                                                 isSelected
