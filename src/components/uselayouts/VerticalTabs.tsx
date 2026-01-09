@@ -111,7 +111,7 @@ export default function VerticalTabs() {
                                             "group relative flex items-start gap-4 py-6 md:py-8 text-left transition-all duration-500 border-t border-border/50 first:border-0",
                                             isActive
                                                 ? "text-foreground"
-                                                : "text-muted-foreground/60 hover:text-foreground"
+                                                : "text-foreground/60 hover:text-foreground"
                                         )}
                                     >
                                         <div className="absolute left-[-16px] md:left-[-24px] top-0 bottom-0 w-[2.5px] bg-muted">
@@ -131,7 +131,7 @@ export default function VerticalTabs() {
                                             )}
                                         </div>
 
-                                        <span className="text-[9px] md:text-[10px] font-medium mt-1 tabular-nums opacity-50">
+                                        <span className="text-[9px] md:text-[10px] font-medium mt-1 tabular-nums text-foreground/70">
                                             /{service.id}
                                         </span>
 
@@ -139,7 +139,7 @@ export default function VerticalTabs() {
                                             <span
                                                 className={cn(
                                                     "text-xl md:text-2xl lg:text-3xl font-normal tracking-tight transition-colors duration-500",
-                                                    isActive ? "text-foreground" : ""
+                                                    isActive ? "text-foreground" : "text-foreground/80"
                                                 )}
                                             >
                                                 {service.title}

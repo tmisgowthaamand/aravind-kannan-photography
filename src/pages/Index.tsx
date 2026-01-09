@@ -4,19 +4,22 @@ import Layout from '../components/layout/Layout';
 import { AuroraBackground } from '../components/creative/AuroraBackground';
 
 // Uselyout Components
+import { lazy, Suspense } from 'react';
+
+// Uselyout Components
 import FeatureCarousel from '../components/uselayouts/FeatureCarousel';
 
-import FluidExpandingGrid from '../components/uselayouts/FluidExpandingGrid';
-import VerticalTabs from '../components/uselayouts/VerticalTabs';
-import ShakeTestimonial from '../components/uselayouts/ShakeTestimonial';
+const FluidExpandingGrid = lazy(() => import('../components/uselayouts/FluidExpandingGrid'));
+const VerticalTabs = lazy(() => import('../components/uselayouts/VerticalTabs'));
+const ShakeTestimonial = lazy(() => import('../components/uselayouts/ShakeTestimonial'));
 
 // Assets
-import heroWedding from '@/assets/hero-wedding.jpg';
-import portfolioWedding from '@/assets/portfolio-wedding.jpg';
-import portfolioBridal from '@/assets/portfolio-bridal.jpg';
-import portfolioFashion from '@/assets/portfolio-fashion.jpg';
-import portfolioPortrait from '@/assets/portfolio-portrait.jpg';
-import portfolioCommercial from '@/assets/portfolio-commercial.jpg';
+import heroWedding from '@/assets/hero-wedding.webp';
+import portfolioWedding from '@/assets/portfolio-wedding.webp';
+import portfolioBridal from '@/assets/portfolio-bridal.webp';
+import portfolioFashion from '@/assets/portfolio-fashion.webp';
+import portfolioPortrait from '@/assets/portfolio-portrait.webp';
+import portfolioCommercial from '@/assets/portfolio-commercial.webp';
 
 const Index = () => {
   const portfolioItems = [
@@ -83,7 +86,9 @@ const Index = () => {
           </div>
 
           <div className="min-h-[600px]">
-            <FluidExpandingGrid items={portfolioItems} id="home-portfolio-grid" />
+            <Suspense fallback={<div className="w-full h-[600px] animate-pulse bg-muted/20 rounded-lg" />}>
+              <FluidExpandingGrid items={portfolioItems} id="home-portfolio-grid" />
+            </Suspense>
           </div>
 
           <div className="mt-12 text-center md:hidden">
@@ -106,7 +111,9 @@ const Index = () => {
                 the unguarded expressions, the light that tells its own story.
               </p>
             </div>
-            <VerticalTabs />
+            <Suspense fallback={<div className="w-full h-96 animate-pulse bg-muted/20 rounded-lg" />}>
+              <VerticalTabs />
+            </Suspense>
           </div>
         </div>
       </section>
@@ -124,7 +131,9 @@ const Index = () => {
               </p>
             </div>
             <div className="flex-1 flex justify-center md:justify-end w-full">
-              <ShakeTestimonial />
+              <Suspense fallback={<div className="w-full h-64 animate-pulse bg-muted/20 rounded-lg" />}>
+                <ShakeTestimonial />
+              </Suspense>
             </div>
           </div>
         </div>
