@@ -83,10 +83,10 @@ export default function ShakeTestimonial() {
     }, [handleNext]);
 
     return (
-        <div className="flex items-center justify-center w-full bg-transparent p-4 overflow-hidden py-4 min-h-[400px] md:min-h-[450px] max-w-full md:max-w-[440px] mx-auto">
+        <div className="flex items-center justify-center w-full bg-transparent p-4 min-h-[450px] max-w-[440px] mx-auto overflow-visible">
             <div
                 className="relative w-full h-[340px]"
-                style={{ perspective: "1200px" }}
+                style={{ perspective: "1000px" }}
             >
                 <AnimatePresence mode="popLayout">
                     {cards.map((card, index) => {
@@ -149,9 +149,9 @@ export default function ShakeTestimonial() {
                                 )}
                                 onClick={handleNext}
                             >
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-3 md:gap-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex items-center justify-center w-10 h-10 bg-white/50 rounded-full shadow-inner border border-black/5 overflow-hidden shrink-0">
+                                        <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-white/50 rounded-full shadow-inner border border-black/5 overflow-hidden shrink-0">
                                             <img
                                                 src={card.avatar}
                                                 className="w-full h-full object-cover"

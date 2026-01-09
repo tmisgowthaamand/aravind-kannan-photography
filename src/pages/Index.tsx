@@ -115,7 +115,7 @@ const Index = () => {
       <section className="section-padding bg-background border-y border-border">
         <div className="container-editorial">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="max-w-md">
+            <div className="max-w-md text-center md:text-left">
               <p className="text-caption text-muted-foreground mb-4 font-medium uppercase tracking-widest">Feedback</p>
               <h2 className="text-4xl md:text-5xl font-serif leading-tight">Trusted by incredible people</h2>
               <p className="text-body text-muted-foreground mt-6">
@@ -123,7 +123,7 @@ const Index = () => {
                 Our connection with clients is the heart of every project.
               </p>
             </div>
-            <div className="flex-1 flex justify-center md:justify-end">
+            <div className="flex-1 flex justify-center md:justify-end w-full">
               <ShakeTestimonial />
             </div>
           </div>
